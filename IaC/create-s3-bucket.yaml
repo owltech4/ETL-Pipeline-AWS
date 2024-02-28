@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: An example CloudFormation template for creating an S3 bucket. #Resource description
+Resources: #Resource list
+  MyS3Bucket: #Create the resource
+    Type: "AWS::S3::Bucket" #Resource type
+    Properties: #Resource properties
+      BucketName: projects-2024 #Bucket name
+      AccessControl: PublicRead #Bucket access
+
