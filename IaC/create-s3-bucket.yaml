@@ -4,6 +4,5 @@ Resources: #Resource list
   MyS3Bucket: #Create the resource
     Type: "AWS::S3::Bucket" #Resource type
     Properties: #Resource properties
-      BucketName: projects-2024 #Bucket name
-      AccessControl: PublicRead #Bucket access
-
+      BucketName: bucket-study-marcelo #Bucket name
+      AccessControl: PublicRead #Bucket access control
