@@ -24,6 +24,26 @@ input_s3_path = "s3://bucket-study-marcelo/State of Data 2021 - Dataset - Pgina1
 # Lê o arquivo do S3 usando Spark
 df_spark = spark.read.csv(input_s3_path, header=True)
 
+# Renomeia as colunas do DataFrame do Spark para que sejam iguais aos nomes das colunas do DataFrame do Pandas
+#df_spark_renamed = (df_spark
+#                    .withColumnRenamed('_p0_id_', 'NewColumn1')
+#                    .withColumnRenamed('_p1_a_idade_', 'NewColumn2')
+#                    .withColumnRenamed('_p1_a_a_faixa_idade_', 'NewColumn3')
+#                    .withColumnRenamed('_p1_b_genero_', 'NewColumn4')
+#                    .withColumnRenamed('_p1_e_estado_onde_mora_', 'NewColumn5')
+#                    .withColumnRenamed('_p1_e_a_uf_onde_mora_', 'NewColumn6')
+#                    .withColumnRenamed('_p1_e_b_regiao_onde_mora_', 'NewColumn7')
+#                    .withColumnRenamed('_p1_g_b_regiao_de_origem_', 'NewColumn8')
+#                    .withColumnRenamed('_p1_g_c_mudou_de_estado_', 'NewColumn9')
+#                    .withColumnRenamed('_p1_h_nivel_de_ensino_', 'NewColumn10')
+#                    .withColumnRenamed('_p1_i_area_de_formacao_', 'NewColumn11')
+#                    .withColumnRenamed('_p2_a_qual_sua_situacao_atual_de_trabalho_', 'NewColumn12')
+#                    .withColumnRenamed('_p2_b_setor_', 'NewColumn13')
+#                    .withColumnRenamed('_p2_c_numero_de_funcionarios_', 'NewColumn14')
+#                    .withColumnRenamed('_p2_d_gestor_', 'NewColumn15')
+                    # Continue com as demais colunas conforme necessário
+                   )
+
 # Mostra os resultados (Isso será visível nos logs do Glue)
 df_spark.show()
 
